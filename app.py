@@ -8,12 +8,13 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+# ADK_BASE_URL = "http://127.0.0.1:8000"
 ADK_BASE_URL = os.getenv("ADK_BASE_URL")
 APP_NAME     = "stadium_operations_agent"
 USER_ID      = "hackathon_judge"
 SESSION_ID   = "biterush_stadium_session"
 
-ES_BASE_URL  = os.getenv("ELASTIC_BASE_URL")
+ES_BASE_URL  = "https://5a3fe89952d14b01a8b0733e3e1903a3.us-central1.gcp.cloud.es.io:443"
 ES_API_KEY   = os.getenv("ELASTIC_API_KEY")
 ES_INDEX     = "logistics-clusters"
 
@@ -248,6 +249,7 @@ def post_batches_to_es(batches: list) -> tuple[int, list[str]]:
             "created_at":    batch.get("created_at", now_iso()),
         }
         url = f"{ES_BASE_URL}/{ES_INDEX}/_doc/{cluster_id}"
+        print(f"Posting to ES: {cluster_id} with {len(doc['order_ids'])} orders and ETA {eta_min} min")
         try:
             r = requests.put(url, json=doc, headers=_es_headers(), timeout=10)
             if r.status_code in (200, 201):
@@ -326,6 +328,7 @@ def fetch_raw_agent_text() -> str:
 
 def parse_agent_response(text: str) -> list:
     batches = []
+    print(text)
     for i, section in enumerate(text.split("---BATCH_START---"), start=1):
         if "---BATCH_END---" not in section:
             continue

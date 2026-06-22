@@ -8,6 +8,8 @@ load_dotenv()
 ELASTIC_API_KEY = os.getenv("ELASTIC_API_KEY")
 ELASTIC_MCP_URL = os.getenv("ELASTIC_MCP_URL")
 
+print(ELASTIC_API_KEY, ELASTIC_MCP_URL)
+
 
 
 import re
