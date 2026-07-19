@@ -13,6 +13,11 @@ ES_API_KEY  = os.getenv("ELASTIC_API_KEY")
 
 st.set_page_config(page_title="Franky Vadapav", layout="centered")
 
+"""
+Copyright (c) 2026 [Charmi Doshi]
+All Rights Reserved. This code is shared publicly for portfolio 
+purposes only. Unauthorized copying or reuse is prohibited.
+"""
 
 st.markdown("""
 <style>

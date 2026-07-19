@@ -10,7 +10,11 @@ ELASTIC_MCP_URL = os.getenv("ELASTIC_MCP_URL")
 
 print(ELASTIC_API_KEY, ELASTIC_MCP_URL)
 
-
+"""
+Copyright (c) 2026 [Charmi Doshi]
+All Rights Reserved. This code is shared publicly for portfolio 
+purposes only. Unauthorized copying or reuse is prohibited.
+"""
 
 import re
 import json

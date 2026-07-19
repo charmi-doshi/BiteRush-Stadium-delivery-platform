@@ -6,9 +6,14 @@ import requests
 from datetime import datetime, timezone
 from dotenv import load_dotenv
 
+# app.py
+"""
+Copyright (c) 2026 [Charmi Doshi]
+All Rights Reserved. This code is shared publicly for portfolio 
+purposes only. Unauthorized copying or reuse is prohibited.
+"""
 load_dotenv()
 
-# ADK_BASE_URL = "http://127.0.0.1:8000"
 ADK_BASE_URL = os.getenv("ADK_BASE_URL")
 APP_NAME     = "stadium_operations_agent"
 USER_ID      = "hackathon_judge"

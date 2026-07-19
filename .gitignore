@@ -1,7 +1,10 @@
 .env
+
 grouping_agent/.env
-grouping_agent/stadium_map.py
+stadium_operations.py/stadium_map.py
 grouping_agent/agent.py
+
+
 
 seed.py
 stadium_agent.py
@@ -21,3 +24,5 @@ app.py
 app2.py
 stadium_map_blueprint.json
 customer_app.py
+customer_app.py
+app.py
