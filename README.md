@@ -122,7 +122,12 @@ streamlit run app.py                  # vendor dashboard
 
 ## CopyRight
 
-Built solo by **Charmi Doshi** for the Google Agent Hackathon - Building Agents for Real-World Challenges.
+# app.py
+"""
+Copyright (c) 2026 [Charmi Doshi]
+All Rights Reserved. This code is shared publicly for portfolio and hackathon 
+purposes only. Unauthorized copying or reuse is prohibited.
+"""
 
 ## License
 
