@@ -100,7 +100,6 @@ pip install -r requirements.txt
 ```bash
 # .env
 ELASTIC_API_KEY=your_key
-ELASTIC_MCP_URL=your_mcp_endpoint
 ADK_BASE_URL=http://127.0.0.1:8000
 ```
 
